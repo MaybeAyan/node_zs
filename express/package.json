@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "express": "^4.19.2",
+    "log4js": "^6.9.1"
+  }
+}
