@@ -1,0 +1,48 @@
+-- name = 'test'
+-- name = 1
+-- do
+-- local name = 'neibu'
+-- arr local type = {10, 20, 30}
+-- obj local type = { name='test',age=18 }
+-- end
+-- print(name)
+-- local a = 1
+-- function func(val)
+-- if a == 1 then
+-- print(1)
+-- return 'a'
+-- elseif a == 2 then
+--  print(2)
+-- return 'b'
+-- else
+--  print(3)
+-- return 'c'
+-- end
+-- end
+-- local val = func(a)
+-- print(val)
+-- for i = 1, 10, 2 do
+-- print(i)
+-- end
+-- 索引从1开始
+-- local arr = {10, 20, 30}
+-- for i, v in ipairs(arr) do
+--    print(i, v)
+-- end
+-- local obj = {
+--  name = 'test',
+-- age = 18
+-- }
+-- for k, v in pairs(obj) do
+--  print(k, v)
+-- end
+-- local M = require("lua.utils")
+-- local r = M.add(10, 20)
+-- print(r)
+-- local file = io.open("./lua/index.txt", 'r')
+-- local content = file:read("*a")
+-- print(content)
+local file = io.open("./lua/index.txt", 'w')
+
+file:write('assasdasdasdasdasdasd')
+
