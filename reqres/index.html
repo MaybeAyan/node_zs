@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 同源策略 协议不同 域名不同 端口不同 浏览器会拒绝请求
+    // 默认是get请求
+    // CORS Content-type: application/x-www-form-urlencoded | multipart/form-data | text/plain
+    // fetch('http://localhost:3000/info').then(res => {
+    //   const header = res.headers;
+    //   console.log(header.get('xyx'))
+    //   return res.json()
+    // }
+    // ).then(res => {
+    //   console.log(res)
+    // })
+
+    const sse = new EventSource('http://localhost:3000/sse')
+
+    sse.addEventListener('test', (e) => {
+      console.log(e.data)
+    })
+
+  </script>
+</body>
+
+</html>
