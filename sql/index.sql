@@ -1,3 +1,4 @@
+USE project;
 # 操作数据表的命令
 
 -- CREATE TABLE `user` (
@@ -58,5 +59,22 @@
 ## 以 华 为结尾
 -- SELECT * FROM `user` WHERE name LIKE '%华';
 
-## 下划线模糊匹配一个字符
+# 下划线模糊匹配一个字符
 -- SELECT * FROM `user` WHERE name LIKE '_华%'
+
+# 新增
+-- INSERT INTO
+--    user (`name`, `age`, `address`)
+-- VALUES ('ceshi2', 18, '广西');
+
+# 新增多个
+-- INSERT INTO
+--    `user` (`name`, `age`, `address`)
+-- VALUES ('CESHI3', 18, '台州'),
+--     ('ceshoi4', NULL, NULL)
+
+# 编辑
+-- UPDATE `user` SET name = '测试edit', age = 88, address = '顺德' WHERE id = 6;
+
+# 删除
+-- DELETE FROM `user` WHERE id = 6;
