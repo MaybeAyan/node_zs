@@ -11,6 +11,15 @@
 
 - [x] 可视化
 - [x] 库表 sql 语句
+- [x] mysql2 + express
+- [x] knex
+- [x] prisma
+
+## 项目架构
+
+- [] MVC
+- [] IoC
+- [] DI
 
 ## Lua
 

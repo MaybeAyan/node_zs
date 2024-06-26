@@ -78,3 +78,54 @@ USE project;
 
 # 删除
 -- DELETE FROM `user` WHERE id = 6;
+
+# 表达式
+
+# SELECT CONCAT(`name`, '123') as name FROM `user`;
+
+# SELECT LEFT(`name`, 1) as name FROM `user`;
+
+# SELECT RIGHT(`name`, 1) as name FROM `user`;
+
+# SELECT COUNT(*) FROM `user`;
+
+# SELECT NOW() FROM `user`;
+
+# SELECT DATE_ADD(NOW(), INTERVAL 1 DAY) FROM `user`;
+
+# SELECT DATE_SUB(NOW(), INTERVAL 1 DAY) FROM `user`;
+
+# SELECT IF(sex = 1, '男', '女') FROM `user`;
+
+# 子查询和联表查询
+
+--CREATE TABLE `table` (
+--  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--  name VARCHAR(100) NOT NULL COMMENT '名字',
+--  create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间'
+--) COMMENT 'table表'
+
+# 子查询必须要用小括号包起来
+
+-- SELECT *
+-- FROM `table`
+-- WHERE
+--     user_id = (
+--         SELECT id
+--         FROM `user`
+--         WHERE
+--             name = '测试'
+--     )
+
+-- SELECT id FROM `user` WHERE name = '测试';
+
+# 联表查询
+# 目的是把table表额数据和user表的数据合并到一起
+
+# 内连接
+
+# 外连接
+# 左连接 LEFT JOIN [name] ON [条件]
+-- SELECT *
+-- FROM `user`
+--     LEFT JOIN `table` ON `user`.id = `table`.user_id
