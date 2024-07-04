@@ -1,0 +1,9 @@
+http://localhost:3000/user/index HTTP/1.1
+
+# POST http://localhost:3000/user/create HTTP/1.1
+# Content-Type: application/json
+
+# {
+#   "name":"路飞",
+#   "email":"115469@qq.com"
+# }
