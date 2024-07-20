@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>节流阀</title>
+</head>
+
+<body>
+  <button id="btn">抽奖</button>
+  <script>
+    const btn = document.getElementById("btn");
+    btn.onclick = function () {
+      fetch('http://localhost:3000/lottery').then(res => {
+        return res.text()
+      }).then(data => {
+        alert(data)
+      })
+
+    }
+  </script>
+</body>
+
+</html>

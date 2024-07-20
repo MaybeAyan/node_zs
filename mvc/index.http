@@ -1,9 +1,11 @@
-http://localhost:3000/user/index HTTP/1.1
+# http://localhost:3000/user/index HTTP/1.0
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiLmtYsyMzIz5ZWKIiwiZW1haWwiOiIxMTEzNDQ0NDQ2OUBxcS5jb20iLCJpYXQiOjE3MjAxNjM2NDksImV4cCI6MTcyMDc2ODQ0OX0.hwRRzwObO-J8awPv2sdhY27suiQLR3XG1nIHZGdP4Io
+
 
 # POST http://localhost:3000/user/create HTTP/1.1
 # Content-Type: application/json
 
 # {
-#   "name":"路飞",
-#   "email":"115469@qq.com"
+#   "name":"测2323啊",
+#   "email":"11134444469@qq.com"
 # }

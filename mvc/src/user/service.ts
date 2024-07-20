@@ -5,9 +5,14 @@ import { UserDto } from "./user.dto";
 import { plainToClass } from "class-transformer";
 import { validate } from "class-validator";
 
+import { JWT } from "../jwt";
+
 @injectable()
 export class UserService {
-  constructor(@inject(PrismaDB) private readonly PrismaDB: PrismaDB) {}
+  constructor(
+    @inject(PrismaDB) private readonly PrismaDB: PrismaDB,
+    @inject(JWT) private readonly JWT: JWT
+  ) {}
 
   public async getList() {
     return await this.PrismaDB.prisma.user.findMany();
@@ -19,9 +24,14 @@ export class UserService {
     if (errors.length) {
       return errors;
     } else {
-      return await this.PrismaDB.prisma.user.create({
+      const result = await this.PrismaDB.prisma.user.create({
         data: user,
       });
+
+      return {
+        ...result,
+        token: this.JWT.createToken(result),
+      };
     }
   }
 }

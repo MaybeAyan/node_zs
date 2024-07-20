@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "node-schedule": "^2.1.1",
+    "request": "^2.88.2"
+  }
+}

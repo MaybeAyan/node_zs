@@ -17,9 +17,11 @@
 
 ## 项目架构
 
-- [ ] MVC
-- [ ] IoC
-- [ ] DI
+- [x] MVC
+- [x] IoC
+- [x] DI
+- [x] JWT
+- [x] Redis
 
 ## Lua
 

@@ -7,15 +7,20 @@ import {
 import { UserService } from "./service";
 import { inject } from "inversify";
 import type { Request, Response } from "express";
+import { JWT } from "../jwt";
 
 @controller("/user")
 export class User {
   constructor(@inject(UserService) private readonly UserService: UserService) {}
 
+  // JWT.middleware()
   @GetMapping("/index")
   public async getIndex(req: Request, res: Response) {
     let result = await this.UserService.getList();
-    res.send(result);
+    res.send({
+      code: 1,
+      data: result,
+    });
   }
 
   @PostMapping("/create")

@@ -2,3 +2,6 @@ express/node_modules/
 Hotlinking/node_modules/
 reqres/node_modules/
 orm/node_modules/
+lua-dev/node_modules/debug/.coveralls.yml
+lua-dev/node_modules/
+shedule/node_modules/
