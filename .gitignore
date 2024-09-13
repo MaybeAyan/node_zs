@@ -6,3 +6,4 @@ lua-dev/node_modules/debug/.coveralls.yml
 lua-dev/node_modules/
 shedule/node_modules/
 socketio/node_modules/
+puppeteer/node_modules/

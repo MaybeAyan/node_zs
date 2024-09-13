@@ -30,3 +30,4 @@
 ## 其他
 
 - [x] socketio
+- [x] python 爬虫
