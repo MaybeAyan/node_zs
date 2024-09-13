@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+
+  <button>x</button>
+
+  <script>
+    const obj = {
+      content: 'x'
+    }
+    const input = document.querySelector('input');
+    const btn = document.querySelector('button');
+
+    function updateView() {
+      input.value = obj.content;
+      btn.textContent = obj.content;
+    }
+
+    input.addEventListener('input', (e) => {
+      obj.content = e.target.value;
+      updateView();
+    })
+
+    btn.addEventListener('click', () => {
+      obj.content += 1;
+      updateView();
+    })
+
+    updateView();
+
+  </script>
+</body>
+
+</html>
