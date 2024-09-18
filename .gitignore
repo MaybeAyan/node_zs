@@ -7,3 +7,5 @@ lua-dev/node_modules/
 shedule/node_modules/
 socketio/node_modules/
 puppeteer/node_modules/
+addon/node_modules/node-addon-api/tools/clang-format.js
+addon/node_modules/
